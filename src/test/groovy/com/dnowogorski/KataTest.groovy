@@ -1,8 +1,11 @@
 package com.dnowogorski
 
 import spock.lang.Specification
+import spock.lang.Unroll
 
 class KataTest extends Specification {
+
+    @Unroll
     def "should find missing letter"() {
         expect:
         Kata.findMissingLetter(array) == result
