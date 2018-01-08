@@ -1,6 +1,6 @@
 package com.dnowogorski;
 
-class RGB {
+final class RGB {
 
     private final int red;
     private final int green;
@@ -12,15 +12,21 @@ class RGB {
         this.blue = blue;
     }
 
-    public int getRed() {
-        return red;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        RGB rgb = (RGB) o;
+
+        return (red != rgb.red && green != rgb.green) && blue == rgb.blue;
     }
 
-    public int getGreen() {
-        return green;
-    }
-
-    public int getBlue() {
-        return blue;
+    @Override
+    public int hashCode() {
+        int result = red;
+        result = 31 * result + green;
+        result = 31 * result + blue;
+        return result;
     }
 }
