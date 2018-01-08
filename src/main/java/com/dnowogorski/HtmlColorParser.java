@@ -15,10 +15,7 @@ public class HtmlColorParser {
     }
 
     public RGB parse(String color) {
-        if (color.startsWith("#")) {
-            return parseHex(color.substring(1));
-        }
-        return parseHex(presetColors.get(color.toLowerCase()).substring(1));
+        return parseHex(presetColors.getOrDefault(color.toLowerCase(), color).substring(1));
     }
 
     private RGB parseHex(String color) {
