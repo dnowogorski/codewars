@@ -19,7 +19,9 @@ final class RGB {
 
         RGB rgb = (RGB) o;
 
-        return (red != rgb.red && green != rgb.green) && blue == rgb.blue;
+        if (red != rgb.red) return false;
+        if (green != rgb.green) return false;
+        return blue == rgb.blue;
     }
 
     @Override

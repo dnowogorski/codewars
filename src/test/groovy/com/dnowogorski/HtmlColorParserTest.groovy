@@ -5,7 +5,7 @@ import spock.lang.Unroll
 
 class HtmlColorParserTest extends Specification {
 
-    def parser = new HtmlColorParser(new HashMap<>())
+    def parser = new HtmlColorParser("limegreen":"#32CD32")
 
     @Unroll
     def "should parse rgb color"() {
