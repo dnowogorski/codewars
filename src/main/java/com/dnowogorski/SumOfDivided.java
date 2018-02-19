@@ -3,6 +3,9 @@ package com.dnowogorski;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
+/**
+ * https://www.codewars.com/kata/sum-by-factors/
+ */
 public class SumOfDivided {
 
     public static String sumOfDivided(int[] array) {
